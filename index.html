@@ -1,0 +1,133 @@
+<!doctype html>
+<html lang="de">
+<head>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<meta name="theme-color" content="#101827"><meta name="description" content="PsychoLog – lokaler psychiatrischer Pflege-Dokumentationsassistent ohne Speicherung von Patientendaten.">
+<link rel="manifest" href="manifest.webmanifest"><title>PsychoLog – Pflegeassistent</title>
+<style>
+:root{--bg:#0b1220;--panel:#121d2d;--panel2:#172438;--line:#26364d;--text:#edf3fb;--muted:#9aabc1;--blue:#5aa7ff;--blue2:#1f6fc2;--green:#70d6b0;--warn:#f0c477;--radius:17px;font-family:Inter,ui-sans-serif,system-ui,-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif}*{box-sizing:border-box}body{margin:0;background:linear-gradient(140deg,#0b1220,#101b2b 58%,#0b1220);color:var(--text);min-height:100vh}button,input,textarea,select{font:inherit}button{cursor:pointer}.app{max-width:1440px;margin:auto;padding:22px}.top{display:flex;align-items:center;justify-content:space-between;gap:18px;margin-bottom:22px}.brand{display:flex;align-items:center;gap:13px}.logo{width:46px;height:46px;border-radius:14px;background:linear-gradient(145deg,#2587e8,#174a83);display:grid;place-items:center;font-weight:900;font-size:22px;box-shadow:0 8px 25px #0b4b8b55}.brand h1{font-size:21px;margin:0;letter-spacing:.2px}.brand p{margin:3px 0 0;color:var(--muted);font-size:12px}.privacy{display:flex;align-items:center;gap:8px;padding:9px 12px;border:1px solid #245c50;background:#102b2a;color:#a7ead5;border-radius:999px;font-size:12px}.layout{display:grid;grid-template-columns:245px minmax(0,1fr);gap:20px}.side,.panel{background:#111c2cdd;border:1px solid var(--line);border-radius:var(--radius);box-shadow:0 16px 45px #0002}.side{padding:13px;height:max-content;position:sticky;top:16px}.navlabel{font-size:10px;letter-spacing:1.4px;color:#71849d;padding:10px 10px 8px;text-transform:uppercase}.nav{display:flex;align-items:center;gap:11px;width:100%;border:0;background:transparent;color:#b8c6d8;text-align:left;padding:11px 10px;border-radius:11px;font-size:13px;margin:2px 0}.nav:hover,.nav.active{background:#1a304b;color:#fff}.nav.active{box-shadow:inset 3px 0 var(--blue)}.num{font-size:10px;color:#7f93ac;margin-left:auto}.main{min-width:0}.intro{padding:22px 24px;margin-bottom:17px;background:linear-gradient(110deg,#16375a,#14263c 62%,#172236);border:1px solid #28517a;border-radius:var(--radius)}.eyebrow{font-size:11px;color:#9acbff;letter-spacing:1.2px;text-transform:uppercase}.intro h2{margin:8px 0 6px;font-size:23px}.intro p{margin:0;color:#c1d0e1;font-size:13px;line-height:1.55;max-width:800px}.workspace{display:grid;grid-template-columns:minmax(0,1.05fr) minmax(330px,.95fr);gap:17px}.panel{padding:20px}.panel h3{font-size:16px;margin:0 0 5px}.sub{font-size:12px;color:var(--muted);line-height:1.5;margin:0 0 17px}.field{margin:0 0 14px}.field label{display:block;color:#c6d4e5;font-size:12px;font-weight:650;margin:0 0 7px}.field input,.field textarea,.field select{width:100%;border:1px solid #31435b;background:#0d1726;color:var(--text);border-radius:10px;padding:11px 12px;outline:none}.field textarea{resize:vertical;min-height:80px;line-height:1.5}.field input:focus,.field textarea:focus,.field select:focus{border-color:var(--blue);box-shadow:0 0 0 3px #338ce322}.grid2{display:grid;grid-template-columns:1fr 1fr;gap:12px}.chips{display:flex;flex-wrap:wrap;gap:7px}.chip{border:1px solid #34465d;background:#111e30;color:#c1cee0;border-radius:999px;padding:7px 10px;font-size:11px}.chip.on{background:#173b60;border-color:#398bd4;color:#eaf5ff}.hint{font-size:11px;color:#8295ad;margin-top:6px}.actions{display:flex;flex-wrap:wrap;gap:9px;margin-top:16px}.btn{border:1px solid #3b526d;background:#1a2a40;color:#eaf2fb;padding:10px 14px;border-radius:10px;font-size:12px;font-weight:700}.btn.primary{background:linear-gradient(135deg,#2589e8,#1765b1);border-color:#388fe0;color:white}.btn.ghost{background:transparent}.btn.danger{border-color:#75474a;color:#ffc4c4;background:#321e27}.output{background:#0c1624;border:1px solid #2a3d55;border-radius:12px;padding:15px;min-height:330px;white-space:pre-wrap;line-height:1.72;font-size:13px;color:#e4edf8}.output.empty{color:#72859d;display:flex;align-items:center;justify-content:center;text-align:center;white-space:normal}.outputhead{display:flex;justify-content:space-between;align-items:center;gap:10px;margin-bottom:12px}.outputhead span{font-size:11px;color:var(--muted)}.notice{margin-top:13px;border:1px solid #594d35;background:#29251c;color:#e8d5a9;border-radius:11px;padding:11px 12px;font-size:11px;line-height:1.5}.bottomnote{margin:17px 2px 0;color:#71849b;font-size:10px;line-height:1.55}.module-fields{display:none}.module-fields.active{display:block}.sectiontitle{font-size:11px;color:#8ea4be;letter-spacing:.8px;text-transform:uppercase;margin:18px 0 10px}.footerbar{display:flex;justify-content:space-between;gap:10px;align-items:center;margin-top:14px;color:#8da1ba;font-size:10px}.tag{border:1px solid #294b68;border-radius:999px;padding:5px 8px;color:#a8d5ff}.phrasebox{border:1px solid #2a405b;background:#0e1a2a;border-radius:12px;padding:13px;margin:14px 0}.phrasebox h4{margin:0 0 5px;font-size:12px}.phrasebox p{margin:0 0 10px;color:#8fa4bd;font-size:11px;line-height:1.45}.phrasegroup{margin-top:10px}.phrasegroup strong{display:block;color:#a9bdd4;font-size:10px;text-transform:uppercase;letter-spacing:.7px;margin-bottom:7px}.phrasebtn{border:1px solid #354b65;background:#17283d;color:#d5e4f4;border-radius:8px;padding:7px 9px;font-size:11px;margin:0 5px 5px 0;text-align:left}.phrasebtn:hover{border-color:#5aa7ff;background:#1b3654}.quality{font-size:11px;color:#a8c5df;margin-top:8px;line-height:1.5}
+@media(max-width:900px){.layout{grid-template-columns:1fr}.side{position:static;display:flex;overflow-x:auto;gap:3px;padding:8px}.navlabel{display:none}.nav{white-space:nowrap;width:auto;flex:0 0 auto;padding:10px}.num{display:none}.workspace{grid-template-columns:1fr}.app{padding:14px}.top{align-items:flex-start}.privacy{font-size:10px}.intro{padding:18px}.intro h2{font-size:20px}}
+@media(max-width:520px){.grid2{grid-template-columns:1fr}.brand p{max-width:180px}.privacy{max-width:130px;line-height:1.3;border-radius:12px}.panel{padding:15px}.output{min-height:220px}}
+</style></head>
+<body><div class="app">
+<header class="top"><div class="brand"><div class="logo">P</div><div><h1>PsychoLog</h1><p>Psychiatrischer Pflege-Dokumentationsassistent</p></div></div><div class="privacy">● Keine Patientendaten werden gespeichert</div></header>
+<div class="layout"><aside class="side"><div class="navlabel">Dokumentationsmodule</div>
+<button class="nav active" data-module="bericht">✎ <span>Pflegebericht</span><span class="num">01</span></button>
+<button class="nav" data-module="beobachtung">◉ <span>Verhaltensbeobachtung</span><span class="num">02</span></button>
+<button class="nav" data-module="krise">＋ <span>Krisenintervention</span><span class="num">03</span></button>
+<button class="nav" data-module="gefahr">◇ <span>Suizidalität & Gefährdung</span><span class="num">04</span></button>
+<button class="nav" data-module="medikation">▤ <span>Medikamentenbeobachtung</span><span class="num">05</span></button>
+<button class="nav" data-module="pflegeplanung">☷ <span>Pflegeplanung</span><span class="num">06</span></button>
+<button class="nav" data-module="deeskalation">⬡ <span>Aggression & Deeskalation</span><span class="num">07</span></button>
+<button class="nav" data-module="uebergabe">⇄ <span>Übergabe</span><span class="num">08</span></button>
+<button class="nav" data-module="aufnahme">＋ <span>Aufnahme & Erstassessment</span><span class="num">09</span></button>
+<button class="nav" data-module="aktivierung">▦ <span>Tagesstruktur & Aktivierung</span><span class="num">10</span></button>
+</aside>
+<main class="main"><section class="intro"><div class="eyebrow">DGKP · Akutpsychiatrie</div><h2 id="pageTitle">Pflegebericht erstellen</h2><p id="pageDesc">Strukturiere deine Beobachtungen und ergänze Freitext. PsychoLog formuliert daraus einen zusammenhängenden, sachlichen Pflegebericht in klinischer Alltagssprache.</p></section>
+<div class="workspace"><section class="panel"><h3 id="formTitle">Dokumentation zusammenstellen</h3><p class="sub">Nur das ausfüllen, was tatsächlich beobachtet, erhoben oder durchgeführt wurde. Nicht zutreffende Felder einfach leer lassen.</p>
+<div id="commonFields">
+<div class="grid2"><div class="field"><label for="person">Neutrale Bezeichnung (optional)</label><input id="person" placeholder="z. B. Pat. / Frau R."></div><div class="field"><label for="time">Zeit / Situation (optional)</label><input id="time" placeholder="z. B. bei der DÜ, vormittags"></div></div>
+<div class="sectiontitle">Beobachtung und Pflegeeinschätzung</div>
+<div class="grid2"><div class="field"><label for="contact">Kontaktverhalten</label><select id="contact"><option value="">Nicht angegeben</option><option>offen und zugewandt</option><option>kooperativ</option><option>distanziert</option><option>zurückgezogen</option><option>ablehnend</option><option>kontaktsuchend</option><option>wechselnd</option></select></div><div class="field"><label for="drive">Antrieb</label><select id="drive"><option value="">Nicht angegeben</option><option>unauffällig</option><option>vermindert</option><option>gesteigert</option><option>wechselnd</option></select></div><div class="field"><label for="mood">Stimmung / Affekt</label><select id="mood"><option value="">Nicht angegeben</option><option>ausgeglichen</option><option>gereizt</option><option>ängstlich</option><option>gedrückt</option><option>dysphorisch</option><option>affektiv labil</option><option>wechselhaft</option></select></div><div class="field"><label for="motor">Psychomotorik</label><select id="motor"><option value="">Nicht angegeben</option><option>unauffällig</option><option>unruhig</option><option>angespannt</option><option>verlangsamt</option><option>gesteigert</option></select></div></div>
+<div class="field"><label for="behavior">Konkrete Verhaltensbeobachtung</label><textarea id="behavior" placeholder="Was war konkret zu sehen oder zu hören? Möglichst beschreibend und ohne Interpretation."></textarea></div>
+<div class="field"><label for="speech">Aussagen / Gesprächsinhalte (optional)</label><textarea id="speech" placeholder="Patientenaussagen möglichst wörtlich oder eindeutig als sinngemäß kennzeichnen."></textarea></div>
+<div class="field"><label for="intervention">Pflegeintervention / Maßnahme</label><textarea id="intervention" placeholder="Was wurde angeboten, durchgeführt oder veranlasst? Wer wurde informiert?"></textarea></div>
+<div class="field"><label for="response">Reaktion / Wirkung / weiterer Verlauf</label><textarea id="response" placeholder="Wie reagierte die Person? Was veränderte sich? Was ist weiter zu beachten?"></textarea></div>
+<div class="field"><label for="free">Zusätzlicher Freitext</label><textarea id="free" placeholder="Weitere relevante Beobachtungen in deiner eigenen Sprache …"></textarea></div>
+</div>
+<div class="phrasebox"><h4>Formulierungsbibliothek · Beobachtungsbausteine</h4><p>Ein Baustein wird nur auf Klick eingefügt. Bitte nur verwenden, wenn die Aussage tatsächlich beobachtet wurde; anschließend bei Bedarf konkretisieren.</p><div id="phraseLibrary"></div></div>
+<div class="quality">Hinweis: Modulspezifische Felder möglichst als vollständige, sachliche Sätze ausfüllen. Freitext wird bewusst nicht automatisch inhaltlich verändert.</div><div id="specialFields"></div>
+<div class="actions"><button class="btn primary" id="generate">Bericht erstellen</button><button class="btn ghost" id="clear">Eingaben zurücksetzen</button></div>
+</section>
+<section class="panel"><div class="outputhead"><div><h3>Fertiger Dokumentationstext</h3><span>Entwurf – vor Übernahme fachlich prüfen</span></div><span class="tag" id="moduleTag">Pflegebericht</span></div><div class="output empty" id="output">Hier erscheint dein formulierter Pflegebericht.<br><br>Die Ausgabe bleibt nur während dieser Sitzung im Arbeitsspeicher.</div><div class="actions"><button class="btn primary" id="copy">Text kopieren</button><button class="btn" id="download">Als TXT exportieren</button><button class="btn danger" id="erase">Alles löschen</button></div><div class="notice"><b>Wichtiger Hinweis:</b> PsychoLog speichert keine Eingaben, nutzt keine externe KI und überträgt keine Inhalte. Verwende in dieser ersten Version ausschließlich fiktive oder anonymisierte Beispieldaten. Vor Einsatz mit echten Patientendaten sind Freigabe und Prüfung durch den Arbeitgeber erforderlich.</div><div class="footerbar"><span>Version 1.1 · lokale Verarbeitung</span><span>Keine automatische Diagnose oder Risikoeinstufung</span></div></section></div>
+<p class="bottomnote">PsychoLog unterstützt die sprachliche Strukturierung pflegerischer Dokumentation. Es ersetzt weder klinische Einschätzung noch hausinterne Standards, ärztliche Anordnungen oder vorgeschriebene Dokumentationssysteme.</p>
+</main></div></div>
+<script>
+const moduleInfo={
+bericht:['Pflegebericht erstellen','Strukturiere deine Beobachtungen und ergänze Freitext. PsychoLog formuliert daraus einen zusammenhängenden, sachlichen Pflegebericht in klinischer Alltagssprache.'],
+beobachtung:['Verhaltensbeobachtung dokumentieren','Beschreibe Kontakt, Aktivität, Affekt, Kommunikation und konkrete Verhaltensweisen – ohne unbelegte Schlussfolgerungen.'],
+krise:['Krisenintervention dokumentieren','Halte Anlass, beobachtbare Anzeichen, gesetzte Maßnahmen, Verständigung und Verlauf nachvollziehbar fest.'],
+gefahr:['Suizidalität & Gefährdung dokumentieren','Dokumentiere konkrete Aussagen, Beobachtungen, Schutzfaktoren, gesetzte Maßnahmen und Informationswege. Keine automatische Risikoklassifizierung.'],
+medikation:['Medikamentenbeobachtung dokumentieren','Erfasse Einnahme, Verweigerung, beobachtete Wirkung und mögliche Nebenwirkungen. Keine eigenständige Therapieempfehlung.'],
+pflegeplanung:['Pflegeplanung formulieren','Verbinde pflegerelevante Probleme, Ressourcen, Ziele, Maßnahmen und Evaluation.'],
+deeskalation:['Aggression & Deeskalation dokumentieren','Beschreibe Auslöser, konkretes Verhalten, Deeskalationsmaßnahmen, Beteiligte und Ergebnis sachlich und zeitlich nachvollziehbar.'],
+uebergabe:['Übergabe erstellen','Fasse relevante Veränderungen, aktuelle Beobachtungsschwerpunkte, Maßnahmen und offene Aufgaben für den nächsten Dienst zusammen.'],
+aufnahme:['Aufnahme & Erstassessment dokumentieren','Strukturiere die pflegerelevante Ausgangssituation, Eigenangaben, Beobachtungen, Ressourcen und erste Maßnahmen.'],
+aktivierung:['Tagesstruktur & Aktivierung dokumentieren','Halte Angebote, Teilnahme, Motivation, Unterstützung und Reaktion im Tagesverlauf fest.']};
+const special={
+krise:[['Anlass / Auslöser','Was ging der Krise voraus?'],['Frühwarnzeichen / Beobachtung','Welche konkreten Anzeichen wurden wahrgenommen?'],['Maßnahmen','Welche Interventionen wurden gesetzt?'],['Verständigung','Welche zuständigen Personen wurden wann informiert?'],['Verlauf / Ergebnis','Wie entwickelte sich die Situation?']],
+gefahr:[['Patientenaussage','Möglichst wörtliche Aussage; keine Deutung als Tatsache formulieren.'],['Konkrete Beobachtung','Was wurde gesehen oder gehört?'],['Schutzfaktoren / Ressourcen','Nur tatsächlich erhobene Faktoren.'],['Maßnahmen / Schutz','Welche Maßnahmen wurden gemäß Standard gesetzt?'],['Weitergabe / Verlauf','Wem wurde die Information wann weitergegeben?']],
+medikation:[['Medikament / Anordnung','Nur notwendige Angaben gemäß hausinterner Dokumentationsregel.'],['Einnahme / Verweigerung','Einnahme, Ablehnung oder nicht erfolgte Gabe.'],['Beobachtete Wirkung','Konkrete Veränderung und zeitlicher Bezug.'],['Mögliche Nebenwirkungen','Beobachtungen, Zeitpunkt und Weitergabe.'],['Maßnahmen / Information','Wen informiert? Was wurde veranlasst?']],
+pflegeplanung:[['Pflegeproblem / Bedarf','Pflegerelevante Problembeschreibung.'],['Ressourcen','Vorhandene Fähigkeiten und unterstützende Faktoren.'],['Pflegeziel','Konkret, individuell und überprüfbar.'],['Maßnahmen','Wer macht was, wann und wie?'],['Evaluation','Zielerreichung und notwendige Anpassung.']],
+deeskalation:[['Situation / Auslöser','Sachliche Beschreibung des Beginns.'],['Konkretes Verhalten','Beobachtbare Handlungen und möglichst genaue Aussagen.'],['Deeskalationsmaßnahmen','Abstand, Gespräch, Reizreduktion, Unterstützung etc. – nur tatsächlich erfolgt.'],['Beteiligte / Verständigung','Wer war beteiligt bzw. wurde informiert?'],['Ergebnis / Nachsorge','Verlauf, Verletzungen oder Schäden falls relevant, weitere Vereinbarungen.']],
+uebergabe:[['Aktueller Zustand','Wesentliche Veränderungen und aktueller Eindruck.'],['Besondere Ereignisse','Relevante Ereignisse des Dienstes.'],['Laufende Maßnahmen','Was wird fortgeführt?'],['Offene Aufgaben','Was muss der nächste Dienst erledigen?'],['Beobachtungsschwerpunkte','Worauf soll besonders geachtet werden?']],
+aufnahme:[['Aufnahmeanlass / Eigenangaben','Als Eigenangabe kennzeichnen.'],['Erste Beobachtung','Kontakt, Orientierung soweit erhoben, Verhalten.'],['Pflegerelevante Vorgeschichte','Nur notwendige und verifizierte Angaben.'],['Ressourcen / Unterstützungsbedarf','Selbstversorgung, Kommunikation, Bezugspersonen etc.'],['Erste Maßnahmen','Orientierung, Information, Vereinbarungen, Verständigung.']],
+aktivierung:[['Angebot / Aktivität','Welche Aktivität wurde angeboten?'],['Teilnahme','Teilgenommen, teilweise teilgenommen oder abgelehnt.'],['Motivation / Unterstützung','Welche Unterstützung war erforderlich?'],['Beobachtete Reaktion','Verhalten und Wirkung während/nach dem Angebot.'],['Weiterer Bedarf','Nächste sinnvolle Aktivierung oder Anpassung.']],
+beobachtung:[['Kommunikation / Gespräch','Gesprächsverhalten und Verständlichkeit, soweit beobachtet.'],['Sozialverhalten','Kontakt zu Mitpatient:innen und Personal.'],['Alltagsverhalten','Aktivitäten, Rückzug, Teilnahme, Selbstversorgung.'],['Weitere Beobachtungen','Konkrete Wahrnehmungen ohne diagnostische Interpretation.']]};
+let active='bericht';let latest='';const $=id=>document.getElementById(id);
+const phraseGroups=[
+['Kontakt und Kommunikation',[
+'Pat. sucht wiederholt aktiv den Kontakt zu PP.',
+'Pat. nimmt Gesprächsangebote an und beteiligt sich am Gespräch.',
+'Pat. beantwortet Fragen knapp und zeigt wenig Gesprächsbereitschaft.',
+'Pat. zieht sich aus Kontakten mit Mitpatient:innen zurück.',
+'Pat. wendet sich wiederholt mit Anliegen an PP.'
+]],
+['Antrieb und Psychomotorik',[
+'Pat. geht wiederholt am Gang auf und ab.',
+'Pat. kann während des Gesprächs kaum ruhig sitzen.',
+'Pat. zeigt sich im Tagesverlauf überwiegend antriebsgemindert.',
+'Pat. wirkt motorisch angespannt und nestelt wiederholt mit den Händen.',
+'Pat. hält sich längere Zeit ruhig im Aufenthaltsbereich auf.'
+]],
+['Stimmung und Affekt',[
+'Pat. wirkt im Kontakt gereizt und reagiert auf Ansprache rasch ungehalten.',
+'Pat. zeigt im Gespräch eine deutlich wechselnde Affektlage.',
+'Pat. wirkt im Kontakt ängstlich und sucht wiederholt Rückversicherung.',
+'Pat. zeigt sich im Gespräch affektiv wenig schwingungsfähig.',
+'Pat. wirkt im weiteren Verlauf zunehmend ruhiger.'
+]],
+['Sozialverhalten und Alltag',[
+'Pat. hält sich überwiegend im eigenen Zimmer auf.',
+'Pat. sucht wiederholt die Nähe anderer Mitpatient:innen.',
+'Pat. nimmt am Stationsgeschehen teil.',
+'Pat. gerät wiederholt in verbale Auseinandersetzungen mit Mitpatient:innen.',
+'Pat. nimmt das angebotene Beschäftigungsangebot nicht an.'
+]]
+];
+function renderPhraseLibrary(){ $('phraseLibrary').innerHTML=phraseGroups.map((g,i)=>`<div class="phrasegroup"><strong>${g[0]}</strong>${g[1].map((t,j)=>`<button type="button" class="phrasebtn" data-phrase="${i}-${j}">＋ ${t}</button>`).join('')}</div>`).join(''); }
+function addPhrase(text){const field=$('behavior');field.value+=(field.value.trim()?'\n':'')+text;field.focus();}
+function renderSpecial(){const fs=special[active]||[];$('specialFields').innerHTML=fs.length?'<div class="sectiontitle">Modulspezifische Angaben</div>'+fs.map((f,i)=>`<div class="field"><label for="sp${i}">${f[0]}</label><textarea id="sp${i}" placeholder="${f[1]}"></textarea></div>`).join(''):'';$('moduleTag').textContent=({bericht:'Pflegebericht',beobachtung:'Beobachtung',krise:'Krise',gefahr:'Gefährdung',medikation:'Medikation',pflegeplanung:'Pflegeplanung',deeskalation:'Deeskalation',uebergabe:'Übergabe',aufnahme:'Aufnahme',aktivierung:'Aktivierung'})[active];}
+function switchModule(m){active=m;document.querySelectorAll('.nav').forEach(b=>b.classList.toggle('active',b.dataset.module===m));$('pageTitle').textContent=moduleInfo[m][0];$('pageDesc').textContent=moduleInfo[m][1];$('formTitle').textContent=moduleInfo[m][0];renderSpecial();$('output').className='output empty';$('output').textContent='Hier erscheint dein formulierter Text. Die Ausgabe bleibt nur während dieser Sitzung im Arbeitsspeicher.';latest='';}
+document.querySelectorAll('.nav').forEach(b=>b.addEventListener('click',()=>switchModule(b.dataset.module)));
+$('phraseLibrary').addEventListener('click',e=>{const b=e.target.closest('[data-phrase]');if(!b)return;const [g,j]=b.dataset.phrase.split('-').map(Number);addPhrase(phraseGroups[g][1][j]);});
+function val(id){return $(id)?.value.trim()||''}
+function cleanEnd(t){return t.trim().replace(/[\s]+$/,'')}
+function ensureSentence(t){t=cleanEnd(t);if(!t)return '';return /[.!?…]$/.test(t)?t:t+'.'}
+function generate(){
+ const person=val('person')||'Pat.';const time=val('time');const parts=[];
+ if(time)parts.push(ensureSentence(person+' wird '+time+' angetroffen'));
+ const traits=[];
+ if(val('contact'))traits.push('im Kontakt '+val('contact'));
+ if(traits.length)parts.push(ensureSentence(person+' zeigt sich '+traits.join(', ')));
+ if(val('drive'))parts.push(ensureSentence('Im Antrieb wirkt '+person+' '+val('drive')));
+ if(val('mood'))parts.push(ensureSentence('Die Stimmung von '+person+' wirkt '+val('mood')));
+ if(val('motor'))parts.push(ensureSentence('Psychomotorisch wirkt '+person+' '+val('motor')));
+ // Narrative fields are deliberately retained verbatim: they may contain direct quotes, chronology or precise clinical context.
+ [['behavior',''],['speech',''],['intervention',''],['response',''],['free','']].forEach(([id])=>{const v=val(id);if(v)parts.push(ensureSentence(v));});
+ const specialValues=(special[active]||[]).map((f,i)=>({label:f[0],value:val('sp'+i)})).filter(x=>x.value);
+ if(specialValues.length){
+   const lead={krise:'Im weiteren Verlauf der Krisensituation:',gefahr:'Ergänzende Angaben zur Gefährdungssituation:',medikation:'Ergänzende Medikamentenbeobachtung:',pflegeplanung:'Pflegeplanung:',deeskalation:'Ergänzende Angaben zur Deeskalationssituation:',uebergabe:'Weitere Übergabeinformationen:',aufnahme:'Ergänzende Angaben zum Erstassessment:',aktivierung:'Ergänzende Angaben zur Tagesstruktur:',beobachtung:'Weitere Verhaltensbeobachtungen:'}[active]||'Ergänzende Angaben:';
+   if(active==='pflegeplanung'||active==='uebergabe')parts.push(lead);
+   specialValues.forEach(x=>parts.push(ensureSentence(x.value)));
+ }
+ if(!parts.length){$('output').className='output empty';$('output').textContent='Bitte gib mindestens eine Beobachtung oder Angabe ein.';return;}
+ latest=parts.join('\n\n');$('output').className='output';$('output').textContent=latest;
+}
+$('generate').addEventListener('click',generate);
+function clearInputs(){document.querySelectorAll('input,textarea').forEach(e=>e.value='');document.querySelectorAll('select').forEach(e=>e.selectedIndex=0);latest='';$('output').className='output empty';$('output').innerHTML='Hier erscheint dein formulierter Text.<br><br>Die Ausgabe bleibt nur während dieser Sitzung im Arbeitsspeicher.';}
+$('clear').addEventListener('click',clearInputs);$('erase').addEventListener('click',()=>{clearInputs();switchModule('bericht')});
+$('copy').addEventListener('click',async()=>{if(!latest){alert('Erstelle zuerst einen Text.');return}try{await navigator.clipboard.writeText(latest);$('copy').textContent='Kopiert ✓';setTimeout(()=>$('copy').textContent='Text kopieren',1600)}catch(e){alert('Kopieren nicht möglich. Bitte Text markieren und manuell kopieren.')}});
+$('download').addEventListener('click',()=>{if(!latest){alert('Erstelle zuerst einen Text.');return}const blob=new Blob([latest],{type:'text/plain;charset=utf-8'});const a=document.createElement('a');a.href=URL.createObjectURL(blob);a.download='psycholog-dokumentation.txt';a.click();URL.revokeObjectURL(a.href)});
+if('serviceWorker'in navigator && location.protocol.startsWith('http'))window.addEventListener('load',()=>navigator.serviceWorker.register('./sw.js').catch(()=>{}));renderSpecial();renderPhraseLibrary();
+</script></body></html>
